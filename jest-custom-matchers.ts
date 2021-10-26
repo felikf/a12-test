@@ -14,7 +14,6 @@ export const CUSTOM_MATCHERS: jest.ExpectExtendMap = {
    * Expected type is a map of string to string value, for example:
    * {
    *     'Authorization': 'Bearer access_token from spec',
-   *     'WEB-API-Key': 'test-web-api-key',
    *     'Pragma': 'no-cache',
    *     'Accept-Language': 'cs'
    * }
@@ -52,7 +51,7 @@ export const CUSTOM_MATCHERS: jest.ExpectExtendMap = {
    * Custom matcher that checks a request that:
    * - does NOT contain all defined headers
    *
-   * Expected type is an array of header names: ['spinner']
+   * Expected type is an array of header names: ['custom']
    */
   notContainHeaders: (actual: TestRequest, expected: string[]) => {
     const result = expected.every(bannedHeader => {
