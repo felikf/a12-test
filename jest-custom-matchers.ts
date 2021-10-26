@@ -19,7 +19,7 @@ export const CUSTOM_MATCHERS: jest.ExpectExtendMap = {
    *     'Accept-Language': 'cs'
    * }
    */
-  toContainHeaders: (actual: TestRequest, expected: unknown) => {
+  toContainHeaders: (actual: TestRequest, expected: Record<string, string | string[]>) => {
     let message = '';
 
     const result = Object.keys(expected).every(requiredHeader => {
