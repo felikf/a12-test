@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'a12-test';
+  aaa: any;
+
+  test() {
+    console.log('Clicked')
+  }
 }

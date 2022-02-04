@@ -1,5 +1,14 @@
 import { TestRequest } from '@angular/common/http/testing';
 
+declare global {
+  namespace jest {
+    interface Matchers<R> {
+      toContainHeaders(expected: Record<string, string>): R;
+      notContainHeaders(expected: string[]): R;
+    }
+  }
+}
+
 /**
  * Custom matchers for Jest
  *
